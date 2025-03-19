@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sydney Christmas Marke</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+<nav class="fixed top-0 left-0 w-full bg-black bg-opacity-50 p-4 z-10">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-xl font-bold">Sydney Christmas Market</h1>
+        <div class="flex space-x-6">
+            <a href="#about" class="text-white hover:text-gray-400">About</a>
+            <a href="#event" class="text-white hover:text-gray-400">Event</a>
+            <a href="#gallery" class="text-white hover:text-gray-400">Gallery</a>
+        </div>
+    </div>
+</nav>
+
+<section class="h-screen bg-cover bg-center flex items-center justify-center relative overflow-hidden" style="background-image: url('/Image/Photo_4.png');">
+    <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md"></div>
+    <div class="relative text-center p-10">
+        <p class="text-4xl md:text-6xl ">Sydney</p>
+        <h1 class="text-6xl md:text-8xl font-extrabold">Christmas Market</h1>
+        <br>
+        <br>
+        <br>
+        <h4 class="text-1xl md:text-3xl"> At Australia </h4>
+        <h4 class="text-1xl md:text-3xl">Every year between December</h4>
+    </div>
+
+
+    <div id="snowflakes-container" class="absolute inset-0 pointer-events-none"></div>
+</section>
+
+<script>
+    function createSnowflake() {
+        const snowflake = document.createElement("div");
+        snowflake.classList.add("snowflake");
+        document.getElementById("snowflakes-container").appendChild(snowflake);
+
+        // Random size, position, and animation duration
+        const size = Math.random() * 8 + 2 + "px";
+        snowflake.style.width = size;
+        snowflake.style.height = size;
+        snowflake.style.left = Math.random() * 100 + "vw";
+        snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+
+        // Remove snowflake after animation
+        setTimeout(() => {
+            snowflake.remove();
+        }, 5000);
+    }
+
+    setInterval(createSnowflake, 30);
+
+</script>
+
+<style>
+    .snowflake {
+        position: absolute;
+        top: -10px;
+        background-color: white;
+        border-radius: 50%;
+        opacity: 0.8;
+        animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+        from {
+            transform: translateY(-10px);
+        }
+        to {
+            transform: translateY(100vh);
+        }
+    }
+</style>
+
+
+<section class="w-full">
+    <img src="/Image/div.png" alt="Section Divider" class="w-full">
+</section>
+
+<section id="p2" class="h-screen bg-cover bg-center flex items-center justify-center relative overflow-hidden" style="background-image: url('/Image/p2.png');">
+
+    <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 200px;">
+
+        <div style="max-width: 50%; color: white; padding: 50px;">
+            <h1 style="font-size: 4rem; font-weight: 800;">Welcome!</h1>
+            <p style="font-size: 2rem; line-height: 1.6;">
+                Christmas is a magical time in NSW.
+                Across the state, you can celebrate
+                the festive season with markets,
+                carol services, spectacular
+                light displays and many other
+                yuletide events.
+                There’s plenty of holiday fun
+                to be had for the whole family –
+                and you might even get a visit
+                from Santa himself!
+            </p>
+        </div>
+
+        <div style="position: absolute; right: 300px; top: 30%; transform: translateX(20%) translateY(-10%); padding: 16px;">
+            <img src="/Image/Tree.png" alt="Tree" style="width: 700px; height: auto;">
+        </div>
+
+        <div style="position: absolute; right: 50px; top: 30%; transform: translateX(0) translateY(-30%); padding: 16px;">
+            <img src="/Image/Elf1.gif" alt="Elf GIF" style="width: 500px; height: auto;">
+        </div>
+
+    </div>
+</section>
+
+
+<section id="p3" class="bg-cover bg-center relative overflow-hidden h-[220vh]"
+         style="background-image: url('/Image/p3.png'); background-size: cover; background-position: top center; background-repeat: no-repeat;">
+
+    <h1 style="font-size: 10rem; font-weight: 1000; color: white; position: absolute;
+               top: 55%; left: 70%; transform: translateX(-50%); z-index: 10;">
+        Events
+    </h1>
+
+    <img src="/Image/ca5a88dd66e63da5.png" alt="ConBelt"
+         style="width: 200%; height: auto; position: absolute; top: 60%; left: 50%;
+                transform: translateX(-50%) scale(1.4); z-index: 1;">
+</section>
+
+<section class="w-full">
+    <img src="/Image/div.png" alt="Section Divider" class="w-full">
+
+</section>
+
+<section id="collage" class="relative bg-green-600 py-20">
+    <div class="container mx-auto text-left">
+        <h1 class="text-white text-6xl font-bold mb-10">Explore More Markets</h1>
+
+        <br>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-50xl mx-auto">
+            <div class="relative group overflow-hidden rounded-lg">
+                <img src="/Image/event1.png" alt="Image 1" class="w-full h-[600px] object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <p class="text-white text-xl font-semibold">Good Food & Wine Show Christmas Market</p>
+                </div>
+            </div>
+
+            <div class="relative group overflow-hidden rounded-lg">
+                <img src="/Image/event2.png" alt="Image 2" class="w-full h-[600px] object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <p class="text-white text-xl font-semibold">Martin Place Christmas Markets</p>
+                </div>
+            </div>
+
+            <div class="relative group overflow-hidden rounded-lg col-span-2">
+                <img src="/Image/event4.png" alt="Image 4" class="w-full h-[600px] object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <p class="text-white text-xl font-semibold">Carriageworks Christmas Markets</p>
+                </div>
+            </div>
+
+            <div class="relative group overflow-hidden rounded-lg">
+                <img src="/Image/event3.png" alt="Image 3" class="w-full h-[600px] object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <p class="text-white text-xl font-semibold">Kirribilli Markets</p>
+                </div>
+            </div>
+
+            <div class="relative group overflow-hidden rounded-lg col-span-2">
+                <img src="/Image/event5.png" alt="Image 4" class="w-full h-[600px] object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <p class="text-white text-xl font-semibold">Homegrown Christmas at The Rocks</p>
+                </div>
+            </div>
+
+            <div class="relative group overflow-hidden rounded-lg">
+                <img src="/Image/event6.png" alt="Image 3" class="w-full h-[600px] object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <p class="text-white text-xl font-semibold">The Enchanted Market</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div id="popup" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-[70vw] h-[70vh] relative flex flex-col">
+        <button class="absolute top-3 right-3 text-gray-600 text-3xl" onclick="closePopup()">&times;</button>
+        <img id="popupImage" class="w-full h-[65%] object-cover rounded-lg mb-4" src="" alt="">
+        <div class="flex flex-col flex-grow text-center">
+            <h2 id="popupTitle" class="text-3xl font-bold mb-2"></h2>
+            <p id="popupDescription" class="text-gray-700 mb-4"></p>
+            <p class="text-gray-500 text-lg"><strong>📍 Where:</strong> <span id="popupLocation"></span></p>
+            <p class="text-gray-500 text-lg"><strong>📅 When:</strong> <span id="popupDate"></span></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const imageElements = document.querySelectorAll("#collage .relative.group");
+        const popup = document.getElementById("popup");
+        const popupImage = document.getElementById("popupImage");
+        const popupTitle = document.getElementById("popupTitle");
+        const popupDescription = document.getElementById("popupDescription");
+        const popupLocation = document.getElementById("popupLocation");
+        const popupDate = document.getElementById("popupDate");
+
+        const marketDetails = {
+            "event1.png": {
+                title: "Good Food & Wine Show Christmas Market",
+                description: "The perfect family-friendly \n" +
+                    "event to get into the \n" +
+                    "festive spirit this year, \n" +
+                    "with over 150 producers \n" +
+                    "set to showcase the best \n" +
+                    "in artisan food, wine, and \n" +
+                    "curated products for gifting\n" +
+                    "and styling. ",
+                location: "Carriageworks, \n" +
+                    "245 Wilson St, Eveleigh",
+                date: "22-24 \n" +
+                    "November 2024"
+            },
+            "event2.png": {
+                title: "Martin Place Christmas Markets",
+                description: "The City of Sydney and Martin Place won't just be lighting up Sydney's iconic \n" +
+                    "Christmas tree \n" +
+                    "this year, they're also bringing the festive cheer with the second installment of the \n" +
+                    "Martin Place Christmas Markets.\n" +
+                    "\n" +
+                    "Last year there were over 40 festive stalls lining Martin Place with loads of \n" +
+                    "Christmas goodies, treats, food, and more! Bring the family along to ogle at \n" +
+                    "Sydney's largest Christmas tree (with over 300 baubles!) before browsing your\n" +
+                    "favourite stalls and enjoying the festive merriment. It's going to be a night to remember. \n",
+                location: "Martin Place, Sydney CBD",
+                date: " 28, 29, 30 November and 1 December, \n" +
+                    "and then every Thursday, Friday and Saturday until 31 December 2024"
+            },
+            "event3.png": {
+                title: "Kirribilli Markets",
+                description: "With approximately 220 stalls of new, \n" +
+                    "second-hand fashion, antiques and collectables, \n" +
+                    "bric-a-brac and homewares, you will find \n" +
+                    "pretty much anything at this market! \n" +
+                    "With an extra market just before Christmas, \n" +
+                    "Kirribilli General Market is a great place to \n" +
+                    "find those last-minute gifts for any budget.\n",
+                location: "Alfred Street S, Milsons Point",
+                date: " 14 December 2024 | 8.30 am to 3 pm"
+            },
+            "event4.png": {
+                title: "Carriageworks Christmas Markets",
+                description: "It wouldn't be Christmas without stopping off at the \n" +
+                    "legendary Carriageworks Markets! \n" +
+                    "Get ready to shop till you drop with over \n" +
+                    "100 incredible vendors offering all the festive \n" +
+                    "essentials for feasting, gifting, and entertaining.\n" +
+                    "\n" +
+                    "From your favourite Farmers Market stalls to \n" +
+                    "special guest vendors, elevate your Yuletide feasts \n" +
+                    "with chocolates, pickles, preserves, wines, spirits, \n" +
+                    "and more. Plus, enjoy delicious treats, FBi DJs \n" +
+                    "spinning festive tunes, and plenty of fun entertainment \n" +
+                    "afor the whole family.",
+                location: "245 Wilson St, Eveleigh",
+                date: " 21 December 2024 | 8 am to 3 pm"
+            },
+            "event5.png": {
+                title: "Homegrown Christmas at The Rocks",
+                description: "Against the illuminated Sydney Harbour Bridge backdrop, \n" +
+                    "roam the quaint cobbled streets of this historic precinct for \n" +
+                    "all your festive goods at The Rocks Christmas Market. \n" +
+                    "\n" +
+                    "Among all the entertainment, art installations, and yummy food, \n" +
+                    "there'll be artisanal gifts galore - from wooden toys and \n" +
+                    "handcrafted jewellery to locally made Christmas decorations \n" +
+                    "and more. There are also lovely tinsel-adorned stores to visit!\n",
+                location: "Playfair Street, The Rocks",
+                date: "15 November to 25 December 2024"
+            },
+            "event6.png": {
+                title: "The Enchanted Market",
+                description: "Westfield Bondi is transforming into a \n" +
+                    "magical Christmas wonderland this festive season.\n" +
+                    "\n" +
+                    "Level 6 of Westfield Bondi Junction will be transformed into \n" +
+                    "The Enchanted Christmas Market from 28 November for \n" +
+                    "3 marvellous weeks of gifts, treats, baubles, food, entertainment, \n" +
+                    "and more.\n",
+                location: "Level 6, Westfield Bondi Junction",
+                date: "28 November to 22 December 2024 | Open \n" +
+                    "Thursday to Sunday"
+            }
+        };
+
+        imageElements.forEach(image => {
+            image.addEventListener("click", function () {
+                const imgElement = image.querySelector("img");
+                const src = imgElement.getAttribute("src");
+                const fileName = src.substring(src.lastIndexOf("/") + 1);
+
+                if (marketDetails[fileName]) {
+                    const details = marketDetails[fileName];
+                    popupImage.src = src;
+                    popupTitle.textContent = details.title;
+                    popupDescription.textContent = details.description;
+                    popupLocation.textContent = details.location;
+                    popupDate.textContent = details.date;
+                    popup.classList.remove("hidden");
+                }
+            });
+        });
+
+        function closePopup() {
+            popup.classList.add("hidden");
+        }
+
+        document.addEventListener("click", function (event) {
+            if (event.target === popup) {
+                closePopup();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closePopup();
+            }
+        });
+    });
+</script>
+
+<section class="w-full">
+    <img src="/Image/div.png" alt="Section Divider" class="w-full">
+
+</section>
+
+<section id="newsletter" class="bg-red-600 py-20 text-white text-center">
+    <div class="container mx-auto max-w-4xl flex flex-col md:flex-row items-center justify-center gap-8">
+
+        <div class="w-full md:w-1/2">
+            <img src="/Image/Deer.png" alt="Rudolph the Reindeer" class="w-full max-w-sm mx-auto">
+        </div>
+
+        <div class="w-full md:w-1/2">
+            <h1 class="text-4xl font-bold mb-6">Sydney Christmas Market Newsletter</h1>
+            <p class="text-lg mb-6">Subscribe to get updates on the best Christmas markets, events, and exclusive offers!</p>
+
+            <form class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <input type="email" placeholder="Enter your email" class="w-full p-3 rounded-lg border border-gray-300 text-gray-900 mb-4" required>
+
+                <label class="flex items-center text-gray-700 text-sm mb-4">
+                    <input type="checkbox" required class="mr-2">
+                    I agree to give my information to Seeho Wahahah
+                </label>
+
+                <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold text-lg">
+                    Subscribe Now
+                </button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
+
+
+
