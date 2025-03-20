@@ -8,18 +8,27 @@
 </head>
 <body class="bg-gray-900 text-white">
 
+<iframe width="0" height="0"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+</iframe>
+
+
 <nav class="fixed top-0 left-0 w-full bg-black bg-opacity-50 p-4 z-10">
     <div class="container mx-auto flex justify-between items-center">
         <h1 class="text-xl font-bold">Sydney Christmas Market</h1>
         <div class="flex space-x-6">
-            <a href="#about" class="text-white hover:text-gray-400">About</a>
+            <a href="#p1" class="text-white hover:text-gray-400">Home</a>
+            <a href="#p2" class="text-white hover:text-gray-400">About</a>
             <a href="#event" class="text-white hover:text-gray-400">Event</a>
-            <a href="#gallery" class="text-white hover:text-gray-400">Gallery</a>
+            <a href="#newsletter" class="text-white hover:text-gray-400">NewsLetter</a>
         </div>
     </div>
 </nav>
 
-<section class="h-screen bg-cover bg-center flex items-center justify-center relative overflow-hidden" style="background-image: url('Image/Photo_4.png');">
+<section class="h-screen bg-cover bg-center flex items-center justify-center relative overflow-hidden" style="background-image: url('Image/Photo_4.png');" id="p1">
     <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md"></div>
     <div class="relative text-center p-10">
         <p class="text-4xl md:text-6xl ">Sydney</p>
@@ -133,7 +142,7 @@
 
 </section>
 
-<section id="collage" class="relative bg-green-600 py-20">
+<section id="event" class="relative bg-green-600 py-20">
     <div class="container mx-auto text-left">
         <h1 class="text-white text-6xl font-bold mb-10">Explore More Markets</h1>
 
@@ -201,7 +210,7 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const imageElements = document.querySelectorAll("#collage .relative.group");
+        const imageElements = document.querySelectorAll("#event .relative.group");
         const popup = document.getElementById("popup");
         const popupImage = document.getElementById("popupImage");
         const popupTitle = document.getElementById("popupTitle");
@@ -368,6 +377,5 @@
 
 </body>
 </html>
-
 
 
